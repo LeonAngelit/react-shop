@@ -2,7 +2,7 @@
   "name": "react-shop",
   "version": "1.0.0",
   "description": "Tienda en react",
-  "homepage": "https://github.com/LeonAngelit/react-shop",
+  "homepage": "https://leonangelit.github.io/react-shop",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
