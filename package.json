@@ -2,11 +2,14 @@
   "name": "react-shop",
   "version": "1.0.0",
   "description": "Tienda en react",
+  "homepage": "https://github.com/LeonAngelit/react-shop",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -b master -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,12 +23,13 @@
   "bugs": {
     "url": "https://github.com/LeonAngelit/react-shop/issues"
   },
-  "homepage": "https://github.com/LeonAngelit/react-shop#readme",
+  "homepage": "https://github.com/LeonAngelit/react-shop",
   "devDependencies": {
     "axios": "^0.27.2",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
