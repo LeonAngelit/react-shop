@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, HashRouter} from 'react-router-dom';
+import { Routes, Route, HashRouter as Router} from 'react-router-dom';
 import Layout from "@containers/Layout";
 import Login from "@containers/Login";
 import RecoveryPassWord from "@containers/RecoveryPassword";
@@ -19,7 +19,7 @@ const App = () => {
     const initialState = useInitialState();
     return(
     <AppContext.Provider value={initialState}>
-   <HashRouter>
+   <Router>
    <Layout>
         <Routes>
             <Route exact path="/" element={<Home />} />
@@ -33,7 +33,7 @@ const App = () => {
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </Layout>
-    </HashRouter>
+    </Router>
     </AppContext.Provider>
     );
 }
