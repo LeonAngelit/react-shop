@@ -1,5 +1,5 @@
 import React from 'react';
-import '@styles/RecoveryPassWord.css';
+import '@styles/Recover.css';
 import Logo from '@assets/logos/logo_yard_sale.svg'
 
 const RecoveryPassWord = () =>{
