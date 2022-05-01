@@ -1,1 +1,0 @@
-import React from"react";import App from"./routes/app.jsx";import{createRoot}from"react-dom/client";var rootElement=document.getElementById("app"),root=createRoot(rootElement);root.render(React.createElement(App,null));
