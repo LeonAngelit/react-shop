@@ -29,7 +29,7 @@ const Header = () =>{
     <img src={IconMenu} alt="Menu" />
   </div>
   <div className="logo">
-    <a href="/"> <img src={Logo} alt="Logo Tienda" /></a>
+    <a href="./"> <img src={Logo} alt="Logo Tienda" /></a>
   </div>
   <nav className="navigation">
     <ul className="option-list">
