@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Platzi Yard Sale</title>
+    <style>
+        :root{
+            --very-light-pink: #c7c7c7;
+            --hospital-green: #ACD9B2;
+            --white: white;
+            --black: black;
+            --dark: #232830;
+            --text-input-field: #F7F7F7;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        .main-container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0 16px;
+        }
+        .main-title{
+            margin-top: 48px;
+            width: 100%;
+            text-align: left;
+            margin-bottom:48px;
+        }
+        /*.main-title img{
+            width: 45%;
+            margin-bottom: 48px;
+        }*/
+        .main-title h2{
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--lg);
+            font-weight: bold;
+            color: black;
+        }
+        /*.main-title p{
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--md);
+            color: var(--dark);
+            font-weight: 300;
+        }*/
+
+        .form-container{
+            margin-top: 0;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .form-container > div{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        .input, .login-button, .secondary-button{
+            border: none;
+            border-radius: 8px;
+            background-color: var(--text-input-field);
+            height: 44px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--md);
+            font-weight: 300;
+            color: var(--dark);
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+        .form-container p{
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--md);
+            font-weight: 300;
+            color: var(--dark);
+            margin-bottom: 3.2rem;
+        }
+        .login-button{
+            background-color: var(--hospital-green);
+            color: white;
+            font-size: var(--lg);
+            font-weight: 500;
+            height: 56px;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+
+        .secondary-button{
+            color: var(--hospital-green);
+            background-color: white;
+            border: 1px solid var(--hospital-green);
+            width: 90%;
+            margin: 0;
+            font-weight: bold;
+            height: 56px;
+            margin: 0 auto 8px;
+        }
+
+        @media (min-width: 600px){
+            .main-title img{
+            display: none;
+        }
+
+            .form-container{
+               height: 50%;
+            }
+    
+        .main-title h2{
+            margin-top: 4rem;
+        }
+        .main-title{
+            margin-top: 8rem;
+        }
+
+        .main-container{
+            margin: 0 auto;
+            max-width: 400px;
+        }
+    
+        } 
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-title">
+            <h2>My account</h2>
+        </div>
+            <div class="form-container">
+                <label for="name">Name</label>
+                <p>Camila Yokoo</p>
+                <label for="email">Email adress</label>
+                <p>camilayokoo@gmail.com</p>
+                <label for="password">Password</label>
+                <p>************</p> 
+            </div>
+    
+            <button class="secondary-button">Edit</button>
+    </div>
+    
+</body>
+</html>

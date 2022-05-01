@@ -1,0 +1,138 @@
+
+.product-detail{
+    width: 100vw;
+    height: 100vh;
+}
+
+.detail__cards-container{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 0;
+}
+
+.detail__product-card{
+    width: 360px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.detail__product-card .close{
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail__product-card .points{
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.detail__product-card li{
+    list-style-type: none;
+    background-color: var(--very-light-pink);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+}
+
+
+.detail__product-card li:hover{
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.detail__product-card .close>img{
+    width: 40%;
+    object-fit: cover;
+   
+}
+
+.detail__product-card > img{
+   max-width: 100%;
+   height: 360px;
+   object-fit: cover;
+   border-radius: 0 0 10% 10%;
+   margin-bottom: 8px;
+}
+
+.detail__product-card .description{
+    width: 100%;
+    display: flex;
+   padding: 12px;
+}
+
+
+/*figure img{
+   width: 90%;
+   cursor: pointer;
+}*/
+
+.text h3 {
+    font-size: var(--md);
+    font-family: 'Quicksand', sans-serif;
+
+}
+.text p{
+    color: var(--dark);
+    font-weight: 300;
+}
+.text p:nth-child(2){
+    margin-bottom: 12px;
+}
+
+.primary-button{
+    background-color: var(--hospital-green);
+    color: white;
+    font-size: var(--md);
+    font-weight: 500;
+    height: 56px;
+    width: 90%;
+    margin: 0 auto;
+    cursor: pointer;  
+    border: none;
+    border-radius: 8px;
+    display: none;
+}
+
+.primary-button .carrito{
+  display: inline-block;
+  background-image: url(./icons/white\ shopping.svg);
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+}
+
+
+@media (max-width: 640px){
+    .primary-button{
+        display: block;
+    }
+    .detail__product-card{
+        width: 100%;
+        max-width: 200px;
+        position:static;
+        margin: 0 auto;
+    }
+
+    .detail__product-card .close{
+        display: none;
+    }
+} 

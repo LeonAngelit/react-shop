@@ -1,0 +1,35 @@
+.home__product-card{
+    width: 240px;
+    height: 100%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.home__product-card > img{
+   max-width: 100%;
+   height: 240px;
+   object-fit: cover;
+   border-radius: 10%;
+   margin-bottom: 8px;
+}
+
+.home__description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 640px){
+    .home__product-card{
+        width: 120px;
+        }
+    
+    .home__product-card > img{
+       max-width: 100%;
+       height: 120px;
+        }
+} 
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <title>Platzi Yard Sale</title>
+        <style>
+            :root{
+                --very-light-pink: #c7c7c7;
+                --hospital-green: #ACD9B2;
+                --white: white;
+                --black: black;
+                --dark: #232830;
+                --text-input-field: #F7F7F7;
+                --sm:14px;
+                --md:16px;
+                --lg:18px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 62.5%;
+            }
+    
+            .main-container{
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .cards-container{
+                width: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: flex-end;
+                right: 0;
+            }
+
+            .product-card{
+                width: 360px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding-bottom: 8px;
+            }
+
+            .product-card .close{
+                position: absolute;
+                background-color: white;
+                width: 40px;
+                height: 40px;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .product-card .points{
+                width: 20%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+
+            }
+
+            .product-card li{
+                list-style-type: none;
+                background-color: var(--very-light-pink);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+
+            }
+
+
+            .product-card li:hover{
+                color: var(--dark);
+                cursor: pointer;
+            }
+
+            .close>img{
+                width: 40%;
+                object-fit: cover;
+               
+            }
+
+            .product-card > img{
+               max-width: 100%;
+               height: 360px;
+               object-fit: cover;
+               border-radius: 0 0 10% 10%;
+               margin-bottom: 8px;
+            }
+
+            .description{
+                width: 100%;
+                display: flex;
+               padding: 12px;
+            }
+
+            /*.product-card > figure{
+                width: 30%;
+                display: flex;
+                justify-content: flex-end;
+            }*/
+
+            figure img{
+               width: 90%;
+               cursor: pointer;
+            }
+
+            h3, p{
+                font-size: var(--md);
+                font-family: 'Quicksand', sans-serif;
+
+            }
+            .text p{
+                color: var(--dark);
+                font-weight: 300;
+            }
+            .text p:nth-child(2){
+                margin-bottom: 12px;
+            }
+
+            .primary-button{
+                background-color: var(--hospital-green);
+                color: white;
+                font-size: var(--md);
+                font-weight: 500;
+                height: 56px;
+                width: 90%;
+                margin: 0 auto;
+                cursor: pointer;  
+                border: none;
+                border-radius: 8px;
+                display: none;
+            }
+
+            .primary-button .carrito{
+              display: inline-block;
+              background-image: url(./icons/white\ shopping.svg);
+              background-size: cover;
+              width: 16px;
+              height: 16px;
+              vertical-align: bottom;
+            }
+            /*.menu{
+                display: block;
+                position: absolute;
+                width: 12vw;
+                height: 172px;
+                background-color: white;
+                right: 120px;
+                border-radius: 8px;
+                border: 1px solid var(--very-light-pink);
+               
+            }
+            .menu ul{
+                width: 80%;
+                height: 100%;
+                align-items: center;
+                list-style: none;
+                padding: 8px;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                text-align: right;
+                margin: 0 auto;
+                padding-top: 20px;
+            }
+
+            ul li{
+                font-size: var(--sm);
+                margin-bottom: 20px;
+            }
+
+            .sign-out{
+                color: var(--hospital-green);
+                border-top: 1px solid var(--very-light-pink);
+                padding-top: 16px;
+                margin-top: 32px;
+                padding-bottom: 12px;
+                font-weight: 400;
+            
+            }
+
+            
+            .main-title{
+                margin-top: 48px;
+                width: 100%;
+                text-align: left;
+                margin-bottom:48px;
+            }
+            .main-title img{
+                width: 45%;
+                margin-bottom: 48px;
+            }
+            .main-title h2{
+                font-family: 'Quicksand', sans-serif;
+                font-size: var(--lg);
+                font-weight: bold;
+                color: black;
+            }
+            .main-title p{
+                font-family: 'Quicksand', sans-serif;
+                font-size: var(--md);
+                color: var(--dark);
+                font-weight: 300;
+            }
+    
+            form{
+                margin-top: 0;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                height: 100%;
+                justify-content: space-between;
+            }
+    
+            form > div{
+                display: flex;
+                flex-direction: column;
+            }
+            label{
+                font-family: 'Quicksand', sans-serif;
+                font-size: var(--sm);
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: black;
+            }
+    
+            .input, .login-button{
+                border: none;
+                border-radius: 8px;
+                background-color: var(--text-input-field);
+                height: 44px;
+                font-family: 'Quicksand', sans-serif;
+                font-size: var(--md);
+                font-weight: 300;
+                color: var(--dark);
+                padding: 8px;
+                margin-bottom: 16px;
+            }
+            .login-button{
+                background-color: var(--hospital-green);
+                color: white;
+                font-size: var(--lg);
+                font-weight: 500;
+                height: 56px;
+                cursor: pointer;
+                margin-bottom: 16px;
+            }*/
+    
+            @media (max-width: 640px){
+                .primary-button{
+                    display: block;
+                }
+                .cards-container, .product-card{
+                    width: 100%;
+                    max-width: 200px;
+                    position:static;
+                    margin: 0 auto;
+                }
+
+                .product-card .close{
+                    display: none;
+                }
+            } 
+        </style>
+    </head>
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="./images/bici.jpg" alt="bike">
+                <div class="points">
+                <li></li>
+                <li></li>
+                <li></li>
+                </div>
+                <div class="description">
+                    <div class="text">
+                        <h3>$ 120.00</h3>
+                        <p>Urban bike</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus atque soluta quam eius tempora vitae sapiente rerum autem quasi numquam</p>
+                    </div>
+                </div>
+                <div class="close"><img src="./icons/icon_close.png" alt=""></div>
+                <button class="primary-button">
+                    <span class="carrito"></span>
+                    Add to cart</button>
+            </div>
+           
+        </div>
+    </section>
+</body>
+</html>
