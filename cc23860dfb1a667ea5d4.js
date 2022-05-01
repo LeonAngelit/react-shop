@@ -1,0 +1,1 @@
+import React from"react";import App from"./routes/app.jsx";import{createRoot}from"react-dom/client";var rootElement=document.getElementById("app"),root=createRoot(rootElement);window.addEventListener("hashchange",(function(){this.location.reload()})),root.render(React.createElement(App,null));
