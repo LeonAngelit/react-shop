@@ -12,7 +12,7 @@ const TotalOrder = ({params, image, index}) => {
       </div>
       <div className="total-amount">
         <p> ${params ? params.amount: null}</p>
-          {image ? <a onClick={() => setOrder(index)} href="my-order"><img src={image} alt="" /></a> : null}
+          {image ? <a onClick={() => setOrder(index)} href="/#/my-order"><img src={image} alt="" /></a> : null}
       </div>
       </div>
     );

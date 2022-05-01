@@ -14,8 +14,8 @@ const MobileMenu = () => {
     <li><a href>Others</a></li>
   </ul>
   <ul className="section2">
-    <li><a href='/My-orders'>My orders</a></li>
-    <li><a href='/my-account'>My account</a></li>
+    <li><a href='/#/My-orders'>My orders</a></li>
+    <li><a href='/#/my-account'>My account</a></li>
   </ul>
   <div className="session-info">
     <p>camilayakoo@gmail.com</p>
