@@ -19,17 +19,17 @@ const App = () => {
     const initialState = useInitialState();
     return(
     <AppContext.Provider value={initialState}>
-   <Router>
+   <Router basename="react-shop">
    <Layout>
-        <Routes>
+        <Routes >
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={< Login />} />
             <Route exact path="/recovery-password" element={< RecoveryPassWord/>} />
             <Route exact path="/create-account" element={<CreateAccount />} />
             <Route exact path="/email-sent" element={<EmailSent />} />
-            <Route path="/my-account" element={<EditAccount />} />
-            <Route path="my-order" element={<MyOrder><CheckoutItem /></MyOrder>}/>
-            <Route path="/my-orders" element={<MyOrders />} />
+            <Route exact path="/my-account" element={<EditAccount />} />
+            <Route exact path="my-order" element={<MyOrder><CheckoutItem /></MyOrder>}/>
+            <Route exact path="/my-orders" element={<MyOrders />} />
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </Layout>
